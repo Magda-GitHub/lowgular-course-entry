@@ -1,0 +1,6 @@
+<form [formGroup]="employeeForm">
+  <input type="text" formControlName="name" placeholder="Name">
+  <input type="number" formControlName="age" placeholder="Age">
+  <input type="number" formControlName="salary" placeholder="Salary">
+  <input type="submit" [disabled]="employeeForm.invalid"  value="Submit">
+</form>
