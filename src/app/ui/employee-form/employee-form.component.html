@@ -4,3 +4,5 @@
   <input type="number" formControlName="salary" placeholder="Salary">
   <input type="submit" [disabled]="employeeForm.invalid"  value="Submit">
 </form>
+
+Your new employee: {{ employeeForm.value.name}} age:{{ employeeForm.value.age}} with salary {{ employeeForm.value.salary}}$ will be added to the system
