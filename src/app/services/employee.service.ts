@@ -21,7 +21,6 @@ export class EmployeeService {
 
   delete(id: string): Observable<void> {
     return this._httpClient.delete('https://dummy.restapiexample.com/api/v1/delete/' + id).pipe(map(_ => void 0));
-
   }
 }
 
