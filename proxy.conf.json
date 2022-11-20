@@ -1,6 +1,6 @@
 {
   "/assets/data/*": {
-    "target": "https://eqsfaxnghe.cfolks.pl",
+    "target": "https://dummy.restapiexample.com/create",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true
