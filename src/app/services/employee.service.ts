@@ -13,7 +13,8 @@ export class EmployeeService {
   }
 
   getAll(): Observable<PersonModel[]> {
-    return this._httpClient.get<ApiResponse<EmployeeModel[]>>( 'https://dummy.restapiexample.com/api/v1/employees',).pipe(
+
+    return this._httpClient.get<ApiResponse<EmployeeModel[]>>( 'https://dummy.restapiexample.com/api/v1/employees').pipe(
       map((response:ApiResponse<EmployeeModel[]>): PersonModel[] => {
         return response.data.map((employeeModel: EmployeeModel) => {
           return {
@@ -33,7 +34,7 @@ export class EmployeeService {
   }
 
   delete(id: string): Observable<void> {
-    return this._httpClient.delete('https://dummy.restapiexample.com/api/v1/delete/' + id).pipe(map(_ => void 0));
+    return this._httpClient.delete('https://dummy.restapiexample.com/api/v1/delete/2' + id).pipe(map(_ => void 0));
   }
 }
 
