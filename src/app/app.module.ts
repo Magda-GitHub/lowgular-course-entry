@@ -18,8 +18,8 @@ import {EmployeeFormComponentModule} from "./ui/employee-form/employee-form.comp
     EmployeeListComponentModule,
     EmployeesFacesComponentModule,
     EmployeeServiceModule,
-    EmployeeFormComponentModule,
-    EmployeeFormComponentModule,
+    EmployeeFormComponentModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],

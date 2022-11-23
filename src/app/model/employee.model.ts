@@ -1,6 +1,10 @@
 export interface EmployeeModel {
-  id: string;
-  name: string;
-  email: string;
-  image:string;
+
+  employee_id: string;
+  employee_mail: string;
+  employee_name: string;
+  employee_salary: number;
+  employee_age: number;
+  profile_image:string;
 }
+
