@@ -14,19 +14,22 @@ export class EmployeeService {
 
   getAll(): Observable<PersonModel[]> {
 
-    return this._httpClient.get<ApiResponse<EmployeeModel[]>>( 'https://dummy.restapiexample.com/api/v1/employees').pipe(
-      map((response:ApiResponse<EmployeeModel[]>): PersonModel[] => {
-        return response.data.map((employeeModel: EmployeeModel) => {
+
+    return this._httpClient.get<ApiResponse<EmployeeModel[]>>('https://dummy.restapiexample.com/api/v1/employees').pipe(
+      map((response) => {
+        const employees = response.data;
+        return employees.map((employeeModel) => {
           return {
-            name: employeeModel.employee_name,
             personalNumber: employeeModel.employee_id,
             img: employeeModel.profile_image,
-            mail: employeeModel.employee_mail + "@lowgular.io",
-            surname: ''
-          }
-        });
-      }));
+            name: employeeModel.employee_name,
+            mail: employeeModel.employee_name + '@lowgular.io'
+          } as PersonModel
+        })
+      })
+    );
   }
+
 
   create(employee: CreateEmployeeModel): Observable<void> {
     return this._httpClient.post('https://dummy.restapiexample.com/api/v1/create', employee).pipe(map(_ => void 0));
